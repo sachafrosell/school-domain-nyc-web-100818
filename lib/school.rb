@@ -1,35 +1,32 @@
+require 'pry'
+
 class School
 
-  def initialize(student)
-    @student = student
+  def initialize(school_name)
+    @school_name = school_name
     @roster = {}
-  end 
-  
+  end
+
   def roster
     @roster
-  end 
-  
-  def add_student(student, school_grade)
-  
-    if @roster.has_key?(school_grade)
-      @roster[school_grade].push(student)
-    else
-      @roster[school_grade] = []
-      @roster[school_grade].push(student)
-    end 
-  end 
-end 
+  end
 
-def grade(school_grade)
-   @roster[school_grade]
-end 
+  def add_student(name, grade)
+    @student_name = name
+    @grade = grade
+    if @roster.include?(grade) == false
+      @roster[grade] = []
+    end
+    @roster[grade] << name
+  end
 
-def sort
-  @roster.each do |school_grade, school_class|
-    school_class.sort!
-  end 
-  
-end 
-    
+  def grade(number)
+    @roster[number]
+  end
 
-school = School.new("Bayside High School")
+  def sort
+    @roster.each do |grade, name|
+      @roster[grade] = name.sort
+    end
+  end
+end

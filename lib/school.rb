@@ -1,4 +1,5 @@
 class School
+  ARRAY_OF_STUDENTS
   def initialize(school)
     @roster = {}
   end 

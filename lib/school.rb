@@ -1,5 +1,5 @@
 class School
-  ARRAY_OF_STUDENTS
+
   def initialize(school)
     @roster = {}
   end 
@@ -7,6 +7,7 @@ class School
     @roster
   end 
   def add_student(student, grade)
+    if @roster
     @roster[grade] = student
   end 
 end 

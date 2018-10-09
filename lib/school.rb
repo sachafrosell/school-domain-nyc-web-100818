@@ -1,5 +1,5 @@
 class School
-  def roster=(roster) 
+  def roster=
     @roster = {}
   end 
 end 

@@ -11,6 +11,7 @@ class School
     if @roster.has_key?(grade)
     @roster[grade].push(student)
   end 
+  end 
 end 
 
 school = School.new("Bayside High School")

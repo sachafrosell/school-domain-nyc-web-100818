@@ -4,11 +4,13 @@ class School
     @student = student
     @roster = {}
   end 
+  
   def roster
     @roster
   end 
+  
   def add_student(student, school_grade)
-    # @roster[school_grade] = []
+  
     if @roster.has_key?(school_grade)
       @roster[school_grade].push(student)
     else

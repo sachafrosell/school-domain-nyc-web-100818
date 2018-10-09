@@ -1,16 +1,14 @@
-require 'pry'
-
 class School
 
-  def initialize(school_name)
-    @school_name = school_name
+  def initialize(student)
+    @student = student
     @roster = {}
-  end
-
+  end 
+  
   def roster
     @roster
-  end
-
+  end 
+  
   def add_student(student, school_grade)
   
     if @roster.has_key?(school_grade)
@@ -22,13 +20,13 @@ class School
   end 
 
 
-  def grade(number)
-    @roster[number]
-  end
+def grade(school_grade)
+   @roster[school_grade]
+end 
 
-  def sort
-    @roster.each do |grade, name|
-      @roster[grade] = name.sort
-    end
-  end
-end
+def sort
+  @roster.each do |school_grade, school_class|
+    school_class.sort!
+  end 
+  
+end 

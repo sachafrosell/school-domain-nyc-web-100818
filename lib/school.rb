@@ -7,10 +7,12 @@ class School
     @roster
   end 
   def add_student(student, grade)
+    array_of_students_in_grades = []
     if @roster.has_key?(grade) == false
-      array_of_students_in_grades = []
+     
       @roster[grade] = array_of_students_in_grades.push(student)
     else
+      array_of_students_in_grades.push
       
   end 
 end 

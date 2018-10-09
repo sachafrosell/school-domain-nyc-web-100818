@@ -20,9 +20,9 @@ class School
   end 
 
 
-  # def grade(school_grade)
-  # @roster[school_grade]
-  # end 
+   def grade(school_grade)
+    @roster[school_grade]
+   end 
 
   # def sort
   # @roster.each do |school_grade, school_class|

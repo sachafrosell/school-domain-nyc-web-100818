@@ -10,7 +10,7 @@ class School
     @roster[grade] = []
     if @roster.has_key?(grade)
     @roster[grade].push(student)
-  end 
+    end 
   end 
 end 
 

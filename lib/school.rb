@@ -6,19 +6,19 @@ class School
   def roster
     @roster
   end 
-  def add_student(student, grade)
-    # @roster[grade] = []
-    if @roster.has_key?(grade)
-      @roster[grade].push(student)
+  def add_student(student, school_grade)
+    # @roster[school_grade] = []
+    if @roster.has_key?(school_grade)
+      @roster[school_grade].push(student)
     else
-      @roster[grade] = []
-      @roster[grade].push(student)
+      @roster[school_grade] = []
+      @roster[school_grade].push(student)
     end 
   end 
 end 
 
-def grade(grade)
-  return @roster[grade]
+def grade(school_grade)
+  return @roster[school_grade]
 end 
 
 school = School.new("Bayside High School")
